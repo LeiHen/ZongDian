@@ -1,29 +1,40 @@
 // JavaScript Document
 
 /**
- * @name     :collectWeb
+ * @name     :regLoginTab
  * @author   :Nice
- * @dependent:收藏本站
+ * @dependent:登陆注册切换
  */
-function addFavorite() {
+function regLoginTab(id) {
+    var e=$("#"+id);
+    var tab=e.find('.tab');
+    var tabItme=tab.find('.itme');
+    var content=e.find('.content');
+    var contentItme=content.find('.itme');
 
-    if (window.sidebar && window.sidebar.addPanel) { 
-    // Mozilla Firefox Bookmark
-        window.sidebar.addPanel(document.title, window.location.href, '');
-    } else if (window.external && ('AddFavorite' in window.external)) { 
-    // IE Favorite
-        window.external.AddFavorite(location.href, document.title);
-    } else if (window.opera && window.print) { 
-    // Opera Hotlist
-        this.title = document.title;
-        return true;
-    } else { 
-    // webkit - safari/chrome
-        alert('请使用' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D 收藏！');
-    }
+    
+    tabItme.click(function(event) {
+        contentItme.removeClass('none');
+        var i=$(this).index();
+        
+        contentItme.css({
+            display: 'none'
+        });
+        console.log(contentItme[i]);
+
+        $(contentItme[i]).css({
+            display: 'block'
+        });
+
+        tabItme.removeClass('hover');
+        $(this).addClass('hover');
+    });
 
 }
 /* @end **/
+
+regLoginTab('regLoginBox');
+
 
 /**
 * @name		:

@@ -1,17 +1,10 @@
 @charset "utf-8";
 
 /*全局*/
-body{
-	font-family:Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",SimSun,"宋体",sans-serif;
-	font-size:62.5%;
-}
+body{ font-family:Helvetica,Arial,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑",SimSun,"宋体",sans-serif; font-size:62.5%; }
 
-a:link,a:visited,a:hover,a:active{
-
-}
-a:link,a:visited,a:hover,a:active{
-    text-decoration: none;
-}
+a:link,a:visited,a:hover,a:active{ }
+a:link,a:visited,a:hover,a:active{ text-decoration: none; }
 
 
 .w_per100{ width: 100%; }
@@ -19,33 +12,27 @@ a:link,a:visited,a:hover,a:active{
 .w_per618{ width: 61.8%; }
 .w_per382{ width: 38.2%; }
 
-.w_per25{width: 25%;}
-.w_per40{width: 40%;}
-.w_per60{width: 60%;}
-.w_per75{width: 75%;}
+.w_per25{ width: 25%; }
+.w_per40{ width: 40%; }
+.w_per60{ width: 60%; }
+.w_per75{ width: 75%; }
 
 
 /* 头部 */
-.header{
-
-}
+.header{ }
 
 /* main */
-.main{
-
-}
+.main{ }
 
 /* footer*/
-.footer{
-
-}
+.footer{ }
 
 
 
 /*
 	布局
 */
-.g_col_2{ }
+.g_col_2{ overflow: hidden; }
 .g_col_2 .span{ width: 50%; float: left; }
 
 .g_col_3{ }
@@ -63,9 +50,9 @@ a:link,a:visited,a:hover,a:active{
 .g_col_6{ }
 .g_col_6 .span{ width: 16.6666666666666%; float: left; }
 
-.g_col_2575{}
-.g_col_2575 .w_per25{ width: 25%; float: left;}
-.g_col_2575 .w_per75{ width: 75%; float: right;}
+.g_col_2575{ }
+.g_col_2575 .w_per25{ width: 25%; float: left; }
+.g_col_2575 .w_per75{ width: 75%; float: right; }
 
 
 
@@ -75,25 +62,103 @@ a:link,a:visited,a:hover,a:active{
 */
 
 
+/* 按钮 */
+.u_btn{ border: none; border-radius: 2px; font-size:  1.4em; line-height: 1em; display: inline-block; *display: inline; *zoom: 1; color: #333333; text-align: center; vertical-align: middle; background-color: #f5f5f5; padding: 14px 14px; width: 140px; cursor: pointer; }
+
+.u_btn:hover,
+.u_btn:active,
+.u_btn.active,
+.u_btn.disabled,
+.u_btn[disabled] { background-color: #e6e6e6; }
+
+.u_btn:active,
+.u_btn.active { background-color: #cccccc \9; }
+
+.u_btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; }
+
+.u_btn.active,
+.u_btn:active { background-image: none; background-color: #e6e6e6; background-color: #d9d9d9 \9; outline: 0; }
+
+.u_btn.disabled,
+.u_btn[disabled] { cursor: default; background-image: none; background-color: #e6e6e6; opacity: 0.65; filter: alpha(opacity=65); }
+
+.u_btn_danger{ color: #fff; background-color: #e65e42; }
+.u_btn_danger:hover{ color: #fff; background-color: #d6573e; }
+
+.u_btn_primary{ color: #fff; background-color: #308eb5; }
+.u_btn_primary:hover{ color: #fff; background-color: #2d81a6; }
+
+.u_btn_success{ color: #fff; background-color: #7fa900; }
+.u_btn_success:hover{ color: #fff; background-color: #739900; }
+
+
+/* checkbox */
+.u_checkbox{ width: 60px; height: 20px; opacity: 0; filter: alpha(opacity=0); z-index: 1; position: absolute; cursor: pointer; }
+.u_checkbox +.checkbox_icon{ background: url(../images/login_checkbox.png) no-repeat 0 0; display: inline-block; +display: inline; +zoom: 1; width:80px; height:20px; padding-left: 24px; }
+.u_checkbox:checked + .checkbox_icon{ background: url(../images/login_checkbox_pitch.png) no-repeat 0 0; }
+
+/*  */
+
 
 /*
 	模块
 */
 
 /* 注册登录 */
-.m_reg_login{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 608px;
-	height: 284px;
-	margin: auto;
-	padding: 232px 0 0 0;
-	/*172+50*/
-	background: url(../images/login_banner.png) no-repeat center top;
-}
+.m_reg_login{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 608px; height: 284px; margin: auto; padding: 232px 0 0 0; /*172+50*/ background: url(../images/login_banner.png) no-repeat center top; }
+
+.m_reg_login .tab{ height: 60px; overflow: hidden; }
+.m_reg_login .tab .itme{ width: 50%; float: left; background: #000; background: rgba(0,0,0,.6); color: #fff; color: rgba(255,255,255,.6); line-height: 60px; font-size: 2em; text-align: center; letter-spacing: 20px;  cursor:pointer;}
+.m_reg_login .tab .itme:hover,
+.m_reg_login .tab .hover{ background: #fff; color: #000; color: rgba(0,0,0,.6); }
+
+.m_reg_login .content{ background: #fff; overflow: hidden; position:relative;/*height: 284px;*/}
+.m_reg_login .content .itme{ padding: 20px 30px; background: #fff; /*position: absolute;*/ top: 0;
+left: 0;}
+
+
+.m_reg_login .content .reg{overflow: hidden; }
+
+.m_reg_login .content .reg .l,
+.m_reg_login .content .reg .r{ padding-right: 0; padding-left: 0; overflow: hidden;}
+.m_reg_login .content .reg .l dl{ padding-right: 30px; padding-left: 0; }
+.m_reg_login .content .reg .r dl{ padding-left: 30px; padding-right: 0; }
+.m_reg_login .content .reg dl{ }
+.m_reg_login .content .reg dd{ position: relative; }
+.m_reg_login .content .reg dd.wire{ border: 1px solid #e5e5e5; padding: 0 20px; margin: 4px 0; height: 38px; }
+.m_reg_login .content .reg dd.wire:first-child{ height: 38px; }
+.m_reg_login .content .reg .input{ border: none; width: 100%; display: block; font-size: 1.4em; line-height: 38px; outline: none; }
+.m_reg_login .content .reg .hint{ position: absolute; top: 0; color: #a3a4a5; font-size: 1.4em; line-height: 38px; display: inline-block; }
+
+.m_reg_login .content .reg .area{ }
+.m_reg_login .content .reg .area select{ border: 1px solid #e5e5e5; display: block; font-size: 1.4em; line-height: 38px; height: 38px; outline: none; width: 71px; margin: 0 5px; color: #a3a4a5; }
+.m_reg_login .content .reg .area .span:first-child select{ margin-right: 10px; margin-left: 0px; }
+.m_reg_login .content .reg .area .span:last-child select{ margin-left: 10px; margin-right: 0px; }
+.m_reg_login .content .reg .r .u_btn{ width: 100%; margin: 4px 0 0 0; }
+
+.m_reg_login .content .reg .last{ padding: 9px 0; height: 20px; font-size: 1.4em; }
+
+.m_reg_login .content .login { height: 222px; }
+.m_reg_login .content .login .l{ }
+
+.m_reg_login .content .login dd{ position: relative; }
+.m_reg_login .content .login dd.wire{ border: 1px solid #e5e5e5; padding: 0 20px; height: 38px; }
+.m_reg_login .content .login dd.wire:first-child{ border-bottom: none; height: 38px; }
+.m_reg_login .content .login .input{ border: none; width: 100%; display: block; font-size: 1.4em; line-height: 38px; outline: none; }
+.m_reg_login .content .login .hint{ position: absolute; top: 0; color: #a3a4a5; font-size: 1.4em; line-height: 38px; display: inline-block; }
+
+.m_reg_login .content .login .l .u_btn{ width: 100%; margin: 24px 0 0 0; }
+.m_reg_login .content .login .l dd.last{ padding: 10px 0; height: 20px; font-size: 1.2em; color: #8c8b88; }
+.m_reg_login .content .login .l dd.last label{ vertical-align:top; }
+.m_reg_login .content .login .l dd.last .nopaw{ float: right; font-size: 1em; line-height: 20px; color: #8c8b88; }
+.m_reg_login .content .login .l dd.last .nopaw:hover{ text-decoration: underline; }
+.m_reg_login .content .login .r{ text-align: center; position: relative; }
+.m_reg_login .content .login .r .p{ padding: 0 0 0 50px; }
+.m_reg_login .content .login .r .serif{ position: absolute; width: 1px; height: 146px; background: #eaeaea; color: #eaeaea; left: 40px; }
+.m_reg_login .content .login .r .serif span{ background: #fff; padding: 4px; font-size: 1em; line-height: 1em; color: #8c8b88; position: absolute; top: 50%; margin: -10px 0 0 -10px; }
+.m_reg_login .content .login .r .u_btn{ margin: 0 0 10px 0; }
+
+
 
 
 /*
@@ -180,7 +245,7 @@ a:link,a:visited,a:hover,a:active{
 如果你需要把皮肤型的样式抽离出来，通常为文字色、背景色（图）、边框色等，非换肤型网站通常只提取文字色！非换肤型网站不可滥用此类！
 
 状态（.z-）：
-为状态类样式加入前缀，统一标识，方便识别，她只能组合使用或作为后代出现（.u-ipt.z-dis{}，.m-list li.z-sel{}），具体详见命名规则的扩展相关项。
+为状态类样式加入前缀，统一标识，方便识别，她只能组合使用或作为后代出现（.u-ipt.z-dis{ }，.m-list li.z-sel{ }），具体详见命名规则的扩展相关项。
 
 
 */

@@ -11,8 +11,27 @@
 	background-size: cover;
 
 	z-index: 0;
+	min-height: 568px;
 }
 
 .bg_login{
 	background-image: url(../images/bg/img_login_1920x1080.jpg);
 }
+
+
+
+
+
+/* css3 动画 */
+.u_btn,
+.m_reg_login .tab .itme{
+	-webkit-transition:all .4s ease-out;
+	-moz-transition:all .4s ease-out;
+	-ms-transition:all .4s ease-out;
+	-o-transition:all .4s ease-out;
+	transition:all .4s ease-out;
+}
+
+
+
+
