@@ -94,8 +94,9 @@ a:link,a:visited,a:hover,a:active{ text-decoration: none; }
 
 /* checkbox */
 .u_checkbox{ width: 60px; height: 20px; opacity: 0; filter: alpha(opacity=0); z-index: 1; position: absolute; cursor: pointer; }
-.u_checkbox +.checkbox_icon{ background: url(../images/login_checkbox.png) no-repeat 0 0; display: inline-block; +display: inline; +zoom: 1; width:80px; height:20px; padding-left: 24px; }
+.u_checkbox + .checkbox_icon{ background: url(../images/login_checkbox.png) no-repeat 0 0; display: inline-block; +display: inline; +zoom: 1; width:80px; height:20px; line-height: 20px; padding-left: 24px; }
 .u_checkbox:checked + .checkbox_icon{ background: url(../images/login_checkbox_pitch.png) no-repeat 0 0; }
+.u_checkbox + .checked{ background: url(../images/login_checkbox_pitch.png) no-repeat 0 0; }
 
 /*  */
 
@@ -105,17 +106,15 @@ a:link,a:visited,a:hover,a:active{ text-decoration: none; }
 */
 
 /* 注册登录 */
-.m_reg_login{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 608px; height: 284px; margin: auto; padding: 232px 0 0 0; /*172+50*/ background: url(../images/login_banner.png) no-repeat center top; }
+.m_reg_login{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 608px; height: 320px; margin: auto; padding: 232px 0 0 0; /*172+50*/ background: url(../images/login_banner.png) no-repeat center top; }
 
 .m_reg_login .tab{ height: 60px; overflow: hidden; }
-.m_reg_login .tab .itme{ width: 50%; float: left; background: #000; background: rgba(0,0,0,.6); color: #fff; color: rgba(255,255,255,.6); line-height: 60px; font-size: 2em; text-align: center; letter-spacing: 20px;  cursor:pointer;}
+.m_reg_login .tab .itme{ width: 50%;height: 60px; float: left; /*background: #000; */background: rgba(0,0,0,.6); filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99000000', endColorstr='#99000000'); color: #fff; color: rgba(255,255,255,.6); line-height: 60px; font-size: 2em; text-align: center; letter-spacing: 20px;  cursor:pointer;}
 .m_reg_login .tab .itme:hover,
-.m_reg_login .tab .hover{ background: #fff; color: #000; color: rgba(0,0,0,.6); }
+.m_reg_login .tab .hover{ background: #fff; color: #000; color: rgba(0,0,0,.6); filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#ffffffff', endColorstr='#ffffffff');}
 
 .m_reg_login .content{ background: #fff; overflow: hidden; position:relative;/*height: 284px;*/}
-.m_reg_login .content .itme{ padding: 20px 30px; background: #fff; /*position: absolute;*/ top: 0;
-left: 0;}
-
+.m_reg_login .content .itme{ padding: 20px 30px; background: #fff; /*position: absolute;*/ top: 0;left: 0;}
 
 .m_reg_login .content .reg{overflow: hidden; }
 
@@ -127,26 +126,26 @@ left: 0;}
 .m_reg_login .content .reg dd{ position: relative; }
 .m_reg_login .content .reg dd.wire{ border: 1px solid #e5e5e5; padding: 0 20px; margin: 4px 0; height: 38px; }
 .m_reg_login .content .reg dd.wire:first-child{ height: 38px; }
-.m_reg_login .content .reg .input{ border: none; width: 100%; display: block; font-size: 1.4em; line-height: 38px; outline: none; }
+.m_reg_login .content .reg .input{ border: none; width: 100%; height: 38px; display: block; font-size: 1.4em; line-height: 38px; outline: none; }
 .m_reg_login .content .reg .hint{ position: absolute; top: 0; color: #a3a4a5; font-size: 1.4em; line-height: 38px; display: inline-block; }
 
 .m_reg_login .content .reg .area{ }
-.m_reg_login .content .reg .area select{ border: 1px solid #e5e5e5; display: block; font-size: 1.4em; line-height: 38px; height: 38px; outline: none; width: 71px; margin: 0 5px; color: #a3a4a5; }
-.m_reg_login .content .reg .area .span:first-child select{ margin-right: 10px; margin-left: 0px; }
-.m_reg_login .content .reg .area .span:last-child select{ margin-left: 10px; margin-right: 0px; }
+.m_reg_login .content .reg .area select{ border: 1px solid #e5e5e5; display: block; font-size: 1.4em; line-height: 38px; height: 38px; outline: none; width: 79px; margin: 0 2px; color: #a3a4a5; }
+.m_reg_login .content .reg .area .span:first-child select{ margin-right: 4px; margin-left: 0px; }
+.m_reg_login .content .reg .area .span:last-child select{ margin-left: 4px; margin-right: 0px; }
 .m_reg_login .content .reg .r .u_btn{ width: 100%; margin: 4px 0 0 0; }
 
 .m_reg_login .content .reg .last{ padding: 9px 0; height: 20px; font-size: 1.4em; }
 
-.m_reg_login .content .login { height: 222px; }
-.m_reg_login .content .login .l{ }
-
+.m_reg_login .content .login { height:220px;}
+.m_reg_login .content .login .span{ padding-top: 17px;padding-bottom:17px; }
 .m_reg_login .content .login dd{ position: relative; }
 .m_reg_login .content .login dd.wire{ border: 1px solid #e5e5e5; padding: 0 20px; height: 38px; }
 .m_reg_login .content .login dd.wire:first-child{ border-bottom: none; height: 38px; }
-.m_reg_login .content .login .input{ border: none; width: 100%; display: block; font-size: 1.4em; line-height: 38px; outline: none; }
+.m_reg_login .content .login .input{ border: none; width: 100%; display:block; font-size: 1.4em; height: 38px; line-height: 38px; outline: none; }
 .m_reg_login .content .login .hint{ position: absolute; top: 0; color: #a3a4a5; font-size: 1.4em; line-height: 38px; display: inline-block; }
 
+.m_reg_login .content .login .l{ }
 .m_reg_login .content .login .l .u_btn{ width: 100%; margin: 24px 0 0 0; }
 .m_reg_login .content .login .l dd.last{ padding: 10px 0; height: 20px; font-size: 1.2em; color: #8c8b88; }
 .m_reg_login .content .login .l dd.last label{ vertical-align:top; }
@@ -155,7 +154,7 @@ left: 0;}
 .m_reg_login .content .login .r{ text-align: center; position: relative; }
 .m_reg_login .content .login .r .p{ padding: 0 0 0 50px; }
 .m_reg_login .content .login .r .serif{ position: absolute; width: 1px; height: 146px; background: #eaeaea; color: #eaeaea; left: 40px; }
-.m_reg_login .content .login .r .serif span{ background: #fff; padding: 4px; font-size: 1em; line-height: 1em; color: #8c8b88; position: absolute; top: 50%; margin: -10px 0 0 -10px; }
+.m_reg_login .content .login .r .serif span{ background: #fff; padding: 4px; font-size: 1em; line-height: 1em; font-size: 1.4em; color: #8c8b88; position: absolute; top: 50%; margin: -10px 0 0 -10px; }
 .m_reg_login .content .login .r .u_btn{ margin: 0 0 10px 0; }
 
 
@@ -170,18 +169,6 @@ left: 0;}
 /*
 	状态
 */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

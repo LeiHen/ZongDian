@@ -33,7 +33,50 @@ function regLoginTab(id) {
 }
 /* @end **/
 
-regLoginTab('regLoginBox');
+
+/**
+ * @name     :clearTxt
+ * @author   :Nice
+ * @dependent:清除文本
+ */
+function clearTxt(id) {
+    var e=$("#"+id);
+    var input=e.find('.input');
+    var hint=input.next();
+
+    input.focus(function(event) {
+        var val=$(this).val();
+        if (val==""||val==" " ) {
+            $(this).next().css({
+                display: 'none'
+            });
+        };
+    });
+
+    input.blur(function(event) {
+        var val=$(this).val();
+        if (val=="" || val==" ") {
+            console.log(val);
+            $(this).next().css({
+                display: 'block'
+            });
+        };
+    });
+
+    hint.click(function(event) {
+        var val=$(this).val();
+        if (val=="") {
+            $(this).css({
+                display: 'none'
+            });
+        };
+    });
+
+}
+/* @end **/
+
+
+
 
 
 /**
